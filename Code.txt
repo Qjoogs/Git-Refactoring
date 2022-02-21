@@ -1,0 +1,73 @@
+using System; 
+
+using System.Linq; 
+
+ 
+
+namespace SumListNumbers 
+
+{    class Program 
+
+    { 
+
+              static void Main(string[] args) 
+
+        { 
+
+            int[] numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray(); 
+
+            int countZeros = CalcZeros(numbers, numbers.Length); 
+
+            int countNonZero = CalcNonZeros(numbers, numbers.Length); 
+
+            Console.WriteLine($"The count of zeros is: {countZeros}"); 
+
+             Console.WriteLine($"The count of non-zeros is: {countNonZero}"); 
+
+        } 
+
+        static int CalcZeros(int[] numbers) 
+
+        { 
+
+            int countZero = 0; 
+
+            for (int i = 0; i < numbers.Length; i++) 
+
+            {
+                if(numbers[i] == 0)
+                 {
+                    countZero++;
+                 }
+            }
+
+            return countZero; 
+
+        } 
+
+ 
+
+        static int CalcNonZeros(int[] numbers) 
+
+        { 
+
+            int countNonZeros = 0; 
+
+            for (int i = 0; i < numbers.Length; i++) 
+
+            {
+               if(numbers[i] == 0)
+               {
+                 countNonZeros++; 
+               }
+            }
+
+            return countNonZeros; 
+
+        } 
+
+ 
+
+    } 
+
+} 
