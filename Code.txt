@@ -16,9 +16,9 @@ namespace SumListNumbers
 
             int[] numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray(); 
 
-            int countZeros = CalcZeros(numbers, numbers.Length); 
+            int countZeros = CalcZeros(numbers); 
 
-            int countNonZero = CalcNonZeros(numbers, numbers.Length); 
+            int countNonZero = CalcNonZeros(numbers); 
 
             Console.WriteLine($"The count of zeros is: {countZeros}"); 
 
