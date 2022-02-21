@@ -56,7 +56,7 @@ namespace SumListNumbers
             for (int i = 0; i < numbers.Length; i++) 
 
             {
-               if(numbers[i] == 0)
+               if(numbers[i] != 0)
                {
                  countNonZeros++; 
                }
